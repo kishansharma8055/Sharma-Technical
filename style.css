@@ -482,7 +482,7 @@ footer .copyright .pro-links i:hover {
 /*---------------------------------------------------------*/
 /*-------------------- Ipad screen styling ----------------*/
 /*---------------------------------------------------------*/
-@media screen and (max-width: 789px) {
+@media screen and (max-width: 897px) {
 	nav {
 		padding: 15px 20px;
 	}
@@ -569,6 +569,41 @@ footer .copyright .pro-links i:hover {
 }
 
 
+@media screen and (max-width: 610px) {
+	#registration {
+		flex-direction: column;
+	}
+
+	.reminder p,
+	.reminder h1 {
+		text-align: center;
+	}
+
+	.reminder h1 {
+		font-size: 1.8rem;
+	}
+
+	#registration .reminder .time {
+		justify-content: space-evenly;
+		margin-top: 20px;
+	}
+
+	#home {
+		background-image: linear-gradient(rgba(128, 75, 75, 0.3), rgba(105, 60, 60, 0.7)), url("img/image.jpg");
+		width: 100%;
+		height: 100vh;
+		background-size: cover;
+		background-position: center center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding-top: 40px;
+	}
+}
+
+
 @media screen and (max-width: 475px) {
 	#registration {
 		flex-direction: column;
@@ -587,4 +622,5 @@ footer .copyright .pro-links i:hover {
 		justify-content: space-evenly;
 		margin-top: 20px;
 	}
+
 }
