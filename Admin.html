@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <!-- font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="../footer.css">
+
+    <!-- JQuery CDN link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <!-- Navigation start -->
+    <nav>
+        <img src="../image/logo.jpg" class="logo" alt="">
+
+        <p><strong class="Logo">Admin</strong></p>
+
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+            </ul>
+            <img src="../image/menu.png" id="menu-btn" alt="">
+        </div>
+    </nav>
+    <!-- Navigation ends -->
+
+    <!-- Hero section starts from here -->
+    <div id="Hero"></div>
+    <!-- Hero section ends from here -->
+
+    <!-- blogs section start -->
+    <section id="blogs">
+        <h2>Admin Blogs</h2>
+
+        <!-- Control buttons -->
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('मारुतीस्तोत्र')"> मारुती स्तोत्र</button>
+            <button class="btn" onclick="filterSelection('पाशुपतास्त्रस्तोत्र')">पाशुपतास्त्र स्तोत्र</button>
+            <button class="btn" onclick="filterSelection('ramayan')"> Ramayan</button>
+            <button class="btn" onclick="filterSelection('gita')"> Gita</button>
+            <button class="btn" onclick="filterSelection('Illustration')"> Illustration</button>
+            <button class="btn" onclick="filterSelection('other')"> Other</button>
+        </div>
+
+
+        <div class="container">
+            <div class="filterDiv पाशुपतास्त्रस्तोत्र">
+                <img src="../image/shivji.jpg" alt="">
+                <div class="blogs_headings">
+                    <h3>1. पाशुपतास्त्रस्तोत्र</h3>
+                    <p>
+                        How to worship of Lord Shiva in detail.
+                    </p>
+                    <button class="read_more"><a href="pasupati.html">Read More</a></button>
+                </div>
+            </div>
+
+            <div class="filterDiv मारुतीस्तोत्र">
+                <img src="../image/balaji.jpg" alt="">
+                <div class="blogs_headings">
+                    <h3>2. मारुतीस्तोत्र</h3>
+                    <p>
+                        Complete मारुतीस्तोत्र  in hindi with black word.
+                    </p>
+                    <button class="read_more"><a href="maruti.html">Read More</a></button>
+                </div>
+            </div>
+
+            <!-- <div class="filterDiv mata">
+                <img src="image/durgaMata.jpg" alt="">
+                <div class="blogs_headings">
+                    <h3>3. Durga Pujan</h3>
+                    <p>
+                        How to worship of Goddess Durga in every day.
+                    </p>
+                    <button class="read_more"><a href="./blogsData/Durga.html">Read More</a></button>
+                </div>
+            </div> -->
+            
+            <!-- <div class="filterDiv hanuman">Cow</div> -->
+        </div>
+    </section>
+    <!-- blogs section end -->
+
+    <!-- Footer section starts from here -->
+    <footer>
+
+        <h2>Pandit Omprakash Sharma</h2>
+        <p>Here on this site you can know each and every details and data of and related to indian vedic hindi panchang
+            (panchangam).Our goal is to provide you with Panchang, Havan, Puja, Kundli and other subh work Related
+            Services
+            that demonstrate how much we love our Sanatan Culture and want to Preserve and Promote our culture for the
+            benefits of the human race! Not only do we have the most Multi-Dimentioned, Detailed, Precise and Accurate
+            Panchang Products, but we also ensure that they are of the highest quality.</p>
+
+        <div class="footer-col">
+            <h3>Useful Links</h3>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Advertisements</li>
+            <li>Term & Condition</li>
+            <li>Privacy Policy</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Power Tools</h3>
+            <li>Top Products(Books)</li>
+            <li>Shree Dhari Panchang</li>
+            <li>Read Book</li>
+            <li>Havan and Puja</li>
+            <li>Manage Reputation</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Guides</h3>
+            <li>Talk to Astrologer</li>
+            <li>Kundli view Online</li>
+            <li>Any Muharat</li>
+            <li>New House Entry</li>
+            <li>Experts Guidance</li>
+        </div>
+
+        <div class="copyright">
+            <p>
+                Copyright @ 2023 Online Puja All Rights Reserved | A Consumer Brand of Para Digital Technologies.
+            </p>
+            <!-- <div class="pro-links">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div> -->
+        </div>
+    </footer>
+    <!-- Footer section ends from here -->
+
+    <script>
+        // Show menu links on burger click
+        $('#menu-btn').click(function () {
+            $('nav .navigation ul').addClass('active')
+        });
+
+        // Hide navbar on click function
+        $('#menu-close').click(function () {
+            $('nav .navigation ul').removeClass('active')
+        });
+    </script>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current control button (highlight it)
+        // var btnContainer = document.getElementById("myBtnContainer");
+        // var btns = btnContainer.getElementsByClassName("btn");
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].addEventListener("click", function () {
+        //         var current = document.getElementsByClassName("active");
+        //         current[0].className = current[0].className.replace(" active", "");
+        //         this.className += " active";
+        //     });
+        // }
+    </script>
+
+</body>
+
+</html>
